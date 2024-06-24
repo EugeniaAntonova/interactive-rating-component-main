@@ -192,7 +192,7 @@ input[type="radio"]:checked+.radio-button {
 
     .card {
         padding: 36px;
-        gap: 32px;
+        gap: 28px;
     }
 
     .title {
