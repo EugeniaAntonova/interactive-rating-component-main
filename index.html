@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <h1 class="visually-hidden">Rate us</h1>
+  <article class="card card--rating show">
+    <div class="decor button--round"><img src="./images/icon-star.svg" alt=""></div>
+    <h2 class="title">How did we do?</h2>
+    <p class="text">
+      Please let us know how we did with your support request. All feedback is appreciated
+      to help us improve our offering!
+    </p>
+    <form action="" method="post" class="rating-form">
+      <menu>
+        <li>
+          <label>
+            <input type="radio" name="rate" value="1" class="visually-hidden">
+            <span class="radio-button button--round">1</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="rate" value="2" class="visually-hidden">
+            <span class="radio-button button--round">2</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="rate" value="3" class="visually-hidden">
+            <span class="radio-button button--round">3</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="rate" value="4" class="visually-hidden">
+            <span class="radio-button button--round">4</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="rate" value="5" class="visually-hidden">
+            <span class="radio-button button--round">5</span>
+          </label>
+        </li>
+      </menu>
+
+      <button type="submit" class="button button--accent">submit</button>
+    </form>
+  </article>
+  <article class="card card--ty hide">
+    <img src="./images/illustration-thank-you.svg" alt="" class="decor ty-decor">
+    <p class="text output">
+      You selected <span class="js-output">4</span> out of 5
+    </p>
+    <h2 class="title">Thank you!</h2>
+    <p class="text">We appreciate you taking the time to give a rating. If you ever need more support, don`t hesitate to get in touch!</p>
+  </article>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

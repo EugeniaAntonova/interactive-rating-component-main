@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+
+    --accent: hsl(25, 97%, 53%);
+    --text-accent: hsl(0, 0%, 100%);
+    --basic-text: hsl(217, 12%, 63%);
+    /* --bg-element: hsl(0, 0%, 25%); */
+    --bg-element: hsl(213.33deg 17.5% 21.89%);
+    --bg-secondary: hsl(213, 19%, 18%);
+    --bg: hsl(216, 12%, 8%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    height: 100vh;
+    height: 100svh;
+    margin: 0;
+    padding-inline: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--basic-text);
+    background-color: var(--bg);
+}
+
+body > * {
+    grid-area: 1 / 1 / -1 / -1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button--accent {
+    padding: 16px;
+    background-color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--bg);
+    border-radius: 5em;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+@media (hover: hover) {
+    .button--accent:is(:hover, :focus-visible) {
+        color: var(--bg);
+        background-color: var(--text-accent);
+    }
+}
+
+.button--accent:active {
+    color: var(--bg);
+    background-color: var(--text-accent);
+}
+ 
+.card {
+    width: 100%;
+    max-width: 390px;
+    padding: 24px;
+
+    display: grid;
+    gap: 24px;
+    border-radius: 16px;
+    background-color: var(--bg-secondary);
+
+    scale: 0;
+    opacity: 0;
+    transition: scale .3s ease-in, opacity .3s ease-in;
+}
+
+.title {
+    margin: 0;
+    color: var(--text-accent);
+}
+
+.text {
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.rating-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.rating-form menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:space-between;
+}
+
+.rating-form menu li {
+    display: grid;
+}
+
+.rating-form menu li>* {
+    grid-area: 1 / -1;
+}
+
+.rating-form menu li::marker {
+    margin: 0;
+    color: transparent;
+}
+
+.rating-form label {
+    border-radius: 50%;
+}
+
+.button--round {
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--bg-element);
+}
+
+.radio-button {
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+@media (hover: hover) {
+    .radio-button:hover {
+        background-color: var(--accent);
+        color: var(--bg);
+    }
+}
+
+input[type="radio"]:focus-visible+.radio-button {
+    outline: 1px solid var(--text-accent);
+    outline-offset: 4px;
+}
+
+input[type="radio"]:checked+.radio-button {
+    background-color: var(--text-accent);
+    color: var(--bg);
+}
+
+.attribution {
+    position: fixed;
+    top: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--accent);
+}
+
+@media (min-width: 600px) {
+    .button--round {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.card--ty {
+    justify-items: center;
+    text-align: center;
+}
+
+.output {
+    background-color: var(--bg-element);
+    padding: 6px 10px 4px;
+    border-radius: 5em;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.show {
+    scale: 1;
+    opacity: 1;
+}
